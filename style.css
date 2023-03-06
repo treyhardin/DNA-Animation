@@ -1,0 +1,47 @@
+:root {
+  --animatiion-easing: cubic-bezier(0.25, 1, 0.5, 1);
+  --animation-duration: 1s;
+  --movement: 60px;
+}
+
+.animate {
+  opacity: 0;
+  transition: none;
+}
+
+.animate.visible {
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--animatiion-easing), transform var(--animation-duration) var(--animatiion-easing), filter var(--animation-duration) var(--animatiion-easing);
+}
+
+.anim-fadeup {
+  transform: translateY(var(--movement));
+}
+
+.anim-fadeup.visible {
+  transform: translateY(0px);
+}
+
+.anim-fadeleft {
+  transform: translateX(var(--movement));
+}
+
+.anim-fadeleft.visible {
+  transform: translateX(0px);
+}
+
+.anim-faderight {
+  transform: translateX(calc(var(--movement) * -1));
+}
+
+.anim-faderight.visible {
+  transform: translateX(0px);
+}
+
+.anim-skew {
+  transform: translateY(calc(var(--movement) * 2)) skewY(5deg);
+}
+
+.anim-skew.visible {
+  transform: translateY(0px) skewY(0deg);
+}
