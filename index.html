@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="demo.css" />
-    <title>Vite App</title>
+    <title>DNA Animation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Gilda+Display&family=Inter:wght@300&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
         </svg>
         <h1>DNA Animation</h1>
         <p class="body-large">A proposal for implementing baseline animations as part of DNA, for low-lift customizable CSS animations.</p>
-        <button>✨ View on Github ✨</button>
+        <a class="button" href="https://github.com/treyhardin/DNA-Animation" target="_blank">✨ View on Github ✨</a>
       </div>
     </section>
 
@@ -69,13 +69,13 @@
     </section>
 
     <section  class="preview-section">
+      <div data-anim-delay="0" class="image-wrapper animate anim-fadeup">
+        <div class="image-placeholder"></div>
+      </div>
       <div data-anim-delay="0.25" class="text-wrapper animate anim-fadeup">
         <h2>Fade Up</h2>
         <code class="code-example">class="animate anim-fadeup"</code>
         <p>Add more specific animations using one of the preset animation classes. Animation can be applied at the section level, or on individual elements.</p>
-      </div>
-      <div data-anim-delay="0" class="image-wrapper animate anim-fadeup">
-        <div class="image-placeholder"></div>
       </div>
     </section>
 
@@ -84,11 +84,13 @@
         <h2>Fade Left</h2>
         <code class="code-example">data-anim-delay="0"</code>
         <code class="code-example">class="animate anim-fadeleft"</code>
+        <p>Add <code>data-anim-delay</code> attribute to stagger animations.</p>
       </div>
       <div data-anim-delay="0.25" class="text-wrapper animate anim-faderight">
         <h2>Fade Right</h2>
         <code class="code-example">data-anim-delay="1"</code>
         <code class="code-example">class="animate anim-faderight"</code>
+        <p>Add <code>data-anim-delay</code> attribute to stagger animations.</p>
       </div>
     </section>
 
@@ -105,7 +107,7 @@
 
     <footer>
       <h2>Check it Out!</h2>
-      <button>✨ View on Github ✨</button>
+      <a class="button" href="https://github.com/treyhardin/DNA-Animation" target="_blank">✨ View on Github ✨</a>
     </footer>
 
     <script type="module" src="/main.js"></script>
